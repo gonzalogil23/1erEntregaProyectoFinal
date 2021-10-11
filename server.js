@@ -1,10 +1,10 @@
-import { express } from "express";
-import carritoRouter from "./Carrito";
-import productosRouter from "./Productos";
+import Express from "express";
+import carritoRouter from "./routes/carrito.routes";
+import productosRouter from "./routes/productos.routes";
 
-const app = express();
+const app = Express();
 
-app.use(express.json());
+app.use(Express.json());
 const PORT = 8080;
 
 app.listen(PORT, () => {
