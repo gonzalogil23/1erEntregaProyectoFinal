@@ -3,7 +3,7 @@ import {
   getProductsFromChart,
   addProducts,
   deleteProducts,
-} from "../controllers/carritoControl";
+} from "../controllers/carritoControl.js";
 
 const carritoRouter = Router();
 

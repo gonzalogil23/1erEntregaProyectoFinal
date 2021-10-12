@@ -1,4 +1,5 @@
-import { Producto } from "../classModels/Productos";
+import { Producto } from "../classModels/Productos.js";
+import fs from "fs";
 
 let admin = true;
 let products = [];
@@ -26,6 +27,18 @@ export const addProducts = (req, res, next) => {
       image,
       price,
       stock
+    );
+    products.push(productToAdd);
+    fs.appendFile(
+      "./products.txt",
+      JSON.stringify(productToAdd, null, "\t"),
+      (error) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("producto guardado");
+        }
+      }
     );
     res.json(productToAdd);
   }

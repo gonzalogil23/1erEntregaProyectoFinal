@@ -1,0 +1,10 @@
+{
+	"id": "c6bb2e2f-91af-4894-9a7c-676e8bd01222",
+	"timestamp": 1634072414144,
+	"name": "TV",
+	"description": "aaaaa'",
+	"code": 1353133525,
+	"image": "http://placehosssssssslder.com/2",
+	"price": 1410000,
+	"stock": 20
+}

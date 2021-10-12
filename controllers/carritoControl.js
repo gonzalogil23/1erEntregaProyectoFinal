@@ -1,4 +1,5 @@
-import { Carrito } from "../classModels/Carrito";
+import { Carrito } from "../classModels/Carrito.js";
+import fs from "fs";
 
 const chart = new Carrito();
 
@@ -6,9 +7,13 @@ export const getProductsFromChart = (req, res) => {
   return res.status(200).json(chart);
 };
 
-export const addProducts = (req, res) => {
+export const addProducts = async (req, res) => {
   let { body } = req;
   chart.products.push(body);
+  await fs.appendFile(
+    "../data/carrito.txt",
+    JSON.stringify(chart.products, null, "\t")
+  );
   return res.json(body);
 };
 

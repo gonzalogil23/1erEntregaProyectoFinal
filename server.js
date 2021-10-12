@@ -1,6 +1,6 @@
 import Express from "express";
-import carritoRouter from "./routes/carrito.routes";
-import productosRouter from "./routes/productos.routes";
+import carritoRouter from "./routes/carrito.routes.js";
+import productosRouter from "./routes/productos.routes.js";
 
 const app = Express();
 
